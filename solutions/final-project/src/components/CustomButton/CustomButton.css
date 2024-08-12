@@ -1,0 +1,30 @@
+
+.button {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: var(--nterra-blue);
+    color: #fff;
+    cursor: pointer;
+    transition: border-color 0.25s;
+  }
+
+  .button:hover {
+    border-color: var(--nterra-blue);
+    background-color: #008aff;
+    color:  var(--nterra-blue);
+  }
+
+  .button:focus,
+  .button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+  
+.button,
+.button:active,
+.button:focus {
+  outline: none;
+}

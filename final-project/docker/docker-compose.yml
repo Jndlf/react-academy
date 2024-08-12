@@ -1,0 +1,32 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '1337:1337'
+    environment:
+      - MONGO_URL=mongodb://mongo:27017/games
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:6.0
+    ports:
+      - '27017:27017'
+    volumes:
+      - mongo-data:/data/db
+
+  seed:
+    build:
+      context: .
+      dockerfile: Dockerfile.seed
+    volumes:
+      - ./games_data.json:/data/games_data.json
+    environment:
+      - MONGO_URL=mongodb://mongo:27017
+    depends_on:
+      - mongo
+
+volumes:
+  mongo-data:

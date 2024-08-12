@@ -1,0 +1,13 @@
+FROM python:3.11-slim
+
+WORKDIR /data
+
+# Kopiere die requirements-Datei und installiere die Abhängigkeiten
+COPY requirements.txt requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY seed.py seed.py
+COPY games_data.json games_data.json
+
+CMD ["python", "seed.py"]
+

@@ -1,0 +1,40 @@
+.gamecard {
+    display: inline-block;
+    flex-direction: column;
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    width: 25rem;
+    min-width: 25rem;
+    max-width: 30rem;
+    height: 25rem;
+}
+
+.gamecard p {
+    width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.gamecard div {
+    width: 90%;
+    margin-top: 10px;
+    color: #cec6c6;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: medium;
+}
+
+.gamecard span {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 100px;
+}
